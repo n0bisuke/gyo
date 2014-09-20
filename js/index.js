@@ -7,7 +7,6 @@
 
     $('.gyo').on('click', gyoPush);
     $('.sukuu').on('click', sukuuFunc);
-    gyoDataStore.on("push", getGyo);
 
     var html = '';
     var gyo_count = 8;
@@ -18,21 +17,31 @@
 
 })(jQuery);
 
+//gyoDataStore.on("push", getGyo);
+gyoDataStore.on("push", function(data){
+    console.log("push受信",data);
+});
+
+gyoDataStore.on("send", function(data){
+    console.log("send受信",data);
+});
+
 function gyoPush(){
-    // $(this).css({transform:'scale(' + 1 + ')'});
+    var lat = gyo_locale.coords.latitude;
+    var lon = gyo_locale.coords.longitude;
+    // gyoDataStore.push({lat:lat, lon:lon},function(data){
+    //     console.log("push送信完了!",data);
+    // });
 
-    console.log("GYO!!!!");
-    var text = 'GYO';
-
-    gyoDataStore.push({message : "aaa"},function(data){
-        console.log("送信完了!");
+    gyoDataStore.send({lat:lat, lon:lon},function(data){
+        console.log("send送信完了!",data);
     });
 }
 
 function getGyo(data){
-    console.log("GYO!",data);
+    console.log("GYO!!!受信",data);
 }
 
 function sukuuFunc(){
-    alert("");
+    //alert("aaa");
 }
