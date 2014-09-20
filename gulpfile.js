@@ -9,6 +9,7 @@ var browser = require('browser-sync');
 //タスクの中身を記載
 var BASE_PATH = './';
 var ect_path = ['./template/*.ect'];
+var ect_w_path = ['./template/**/*.ect'];
 var js_path = ['./js/*.js'];
 var sass_path = ['./scss/**/*.scss'];
 
@@ -57,7 +58,7 @@ gulp.task('reload', function () {
 });
 
 gulp.task('default',['serv'],function(){
-    gulp.watch(ect_path,['html']);
+    gulp.watch(ect_w_path,['html']);
     gulp.watch(sass_path,['sass']);
     gulp.watch(js_path,['js']);
 });
