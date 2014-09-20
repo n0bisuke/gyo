@@ -1,0 +1,33 @@
+//メインボタン
+.ctl{
+	height: 200px;
+	opacity: 0.9;
+
+	img{
+		margin: 50px 10px 50px 10px;
+	}
+
+	&.gyo{
+		background-color:#76B3BE;
+	}
+
+	&.sukuu{
+		background-color:#DD926A;
+	}
+}
+
+/*水槽*/
+.suisou{
+	position: absolute;
+	top: 0;
+	background-color: black;
+	height: 100%;
+	width:100%;
+	z-index: -1;
+	margin: 10px 10px 10px 10px;
+
+	img{
+		width: 100px;
+		animation: move_y 5s infinite linear;
+	}
+}
