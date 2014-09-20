@@ -35,8 +35,8 @@ gulp.task('sass', function () {
 gulp.task('js', function(){
     return gulp.src(js_path)
         .pipe($.plumber())
-        .pipe($.jshint())
-        .pipe($.prettify())
+        //.pipe($.jshint())
+        //.pipe($.prettify())
         .pipe(gulp.dest(BASE_PATH+'js'))
        .pipe(browser.reload({stream: true}));
 });
