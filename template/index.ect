@@ -1,0 +1,27 @@
+<% #include 'common/_const.ect' %>
+<% block 'title': %>GYO!<% end %>
+<% block 'css': %>
+    <link rel="stylesheet" href="./css/index.css">
+<% end %>
+
+<% block 'js': %>
+<!-- build:js js/index.js -->
+    <script src="js/gyo.js"></script>
+    <script src="js/index.js"></script>
+<!-- endbuild -->
+<% end %>
+
+<% @PAGE_URL = '' %>
+
+<% extend 'common/_layout.ect' %>
+<% include 'common/_header.ect' %>
+
+<button id="gyo">
+	GYO!!
+</button>
+
+<button id="sukuu">
+	すくう
+</button>
+
+<% include 'common/_footer.ect' %>
