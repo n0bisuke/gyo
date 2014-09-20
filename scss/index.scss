@@ -14,6 +14,10 @@
 
 	&.gyo{
 		background-color:#76B3BE;
+
+		.gyo_text{
+			width: 300px;
+		}
 	}
 
 	&.sukuu{
@@ -41,8 +45,8 @@
 	animation: shake 5s infinite linear;	
 }
 
-$tops: 30px, 100px, 30px,   500px, 500px, 800px, 800px, 800px, 1100px, 1100px;
-$lefts: 20px,   400px, 800px, 200px, 600px, 0px, 400px, 800px, 200px, 600px;
+$tops: 30px, 10px, 3px,   50px, 50px, 80px, 80px, 80px, 110px, 110px;
+$lefts: 20px,  40px, 80px, 20px, 60px, 0px, 40px, 80px, 20px, 60px;
 $count: 10;
 @for $i from 1 through $count {
 	.fish_#{$i} {

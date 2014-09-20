@@ -2,4 +2,114 @@
   background: url('../image/swim_bg.png') no-repeat;
   background-size: 320px 500px;
   width: 320px;
-  height: 50%; }
+  height: 500px; }
+
+.fish_swim_1 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_2 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_3 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 3px;
+  left: 80px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_4 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_5 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_6 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_7 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_8 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_9 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+
+.fish_swim_10 {
+  background: url('../image/swim_gold_fish.gif') no-repeat;
+  position: absolute;
+  top: 110px;
+  left: 60px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }

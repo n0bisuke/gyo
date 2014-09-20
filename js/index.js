@@ -8,7 +8,7 @@
     $('.gyo').on('click', gyoPush); //ぎょっ
 
     //GYO描画
-    var gyo_count = 1;
+    var gyo_count = 10;
     var html = '';
     for (var i = 1; i <= gyo_count; i++)html += '<div class="fish_'+ i +'"></div>';
     $('.gyo').append(html);
@@ -31,9 +31,16 @@ function gyoPush(){
     //     console.log("push送信完了!",data);
     // });
     
+    $('.gyo_text').attr('src','image/gyo_gold_fish_loop.gif');
+
+    setTimeout(function(){
+        $('.gyo_text').attr('src','image/gyo_gold_fish.gif');
+    }, 100);
+    
+
     gyoDataStore.send({lat:lat, lon:lon},function(data){
         console.log("send送信完了!",data);
-        $('.gyo img').attr('src','image/gyo_gold_fish.gif');
+        
     });
 }
 

@@ -2,5 +2,31 @@
 	background: url('../image/swim_bg.png') no-repeat;
 	background-size: 320px 500px;
 	width: 320px;
-	height: 50%;
+	height: 500px;
+}
+
+@mixin fish_swim($top, $left){
+	background: url('../image/swim_gold_fish.gif') no-repeat;
+	$w: 50%;
+	$h: 30%;
+	position: absolute;
+	top: $top;
+	left: $left;
+	// $w: 204px;
+	// $h: 106px;
+	// $w: $w - 100px;
+	// $h: $h - 100px;
+	background-size: $w $h;
+	width: $w;
+	height: $h;
+	animation: swim 5s infinite linear;	
+}
+
+$tops: 30px, 10px, 3px,   50px, 50px, 80px, 80px, 80px, 110px, 110px;
+$lefts: 20px,  40px, 80px, 20px, 60px, 0px, 40px, 80px, 20px, 60px;
+$count: 10;
+@for $i from 1 through $count {
+	.fish_swim_#{$i} {
+		@include fish_swim(nth($tops, $i), nth($lefts, $i));
+	}
 }
