@@ -32,7 +32,8 @@
     <% content 'css' %>
 
         <!-- build:js js/head.js -->
-        <script src="./lib/modernizr/modernizr.js"></script>
+        <script src="http://cdn.mlkcca.com/v0.2.7/milkcocoa.js"></script>
+        <!--<script src="./lib/modernizr/modernizr.js"></script>-->
         <!-- endbuild -->
 </head>
 
@@ -43,14 +44,14 @@
                 ua.indexOf('iPad') == -1) ||
             ua.indexOf('iPod') > 0 ||
             (ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0)) {
-            location.href = 'sp/';
+            //location.href = 'sp/';
         } else {}
     </script>
     <div id="fb-root"></div>
     <% content %>
         <!-- build:js js/vendor.js -->
-        <script src="lib/jquery/jquery.js"></script>
-        <script src="lib/jquery.easing/jquery.easing.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
         <script>
             (function(i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;

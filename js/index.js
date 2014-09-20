@@ -5,14 +5,12 @@
         Gyo.init();
     }
 
-    $('.gyo').on('click', gyoPush);
-    $('.sukuu').on('click', sukuuFunc);
+    $('.gyo').on('click', gyoPush); //ぎょっ
 
+    //GYO描画
+    var gyo_count = 1;
     var html = '';
-    var gyo_count = 8;
-    for (var i = 1; i <= gyo_count; i++) {
-        html += '<div class="fish_'+ i +'"></div>';
-    }
+    for (var i = 1; i <= gyo_count; i++)html += '<div class="fish_'+ i +'"></div>';
     $('.gyo').append(html);
 
 })(jQuery);
@@ -43,5 +41,5 @@ function getGyo(data){
 }
 
 function sukuuFunc(){
-    //alert("aaa");
+    alert("aaa");
 }
