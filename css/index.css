@@ -1,22 +1,86 @@
 .gyo{
 	background-color:#76B3BE;
 	height: 200px;
+	opacity: 0.9;
 }
 
 .sukuu{
 	background-color:#DD926A;
 	height: 200px;
+	opacity: 0.9;
 }
 
 img{
 	margin: 50px 10px 50px 10px;
 }
 
+/*水槽*/
+.suisou{
+	position: absolute;
+	top: 0;
+	background-color: black;
+	height: 100%;
+	width:100%;
+	z-index: -1;
+	margin: 10px 10px 10px 10px;
+}
+
+.suisou img{
+	width: 100px;
+	animation: move_y 5s infinite linear;
+}
+
+
 /*GYOアニメ*/
+@-webkit-keyframes move_y {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  25% {
+    -webkit-transform: translate(0px, -10px);
+            transform: translate(0px, -10px);
+  }
+
+  50% {
+    -webkit-transform: translate(0px, -10px);
+            transform: translate(0px, -10px);
+  }
+
+  75% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
 @keyframes move_y {
-  0%   {transform:  translate(0px, 0px);    }
-  25%  {transform:  translate(0px, -10px);   }
-  50%  {transform:  translate(0px, -10px);   }
-  75%  {transform:  translate(0px, 0px);   }
-  100% {transform:  translate(0px, 0px);   }
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  25% {
+    -webkit-transform: translate(0px, -10px);
+            transform: translate(0px, -10px);
+  }
+
+  50% {
+    -webkit-transform: translate(0px, -10px);
+            transform: translate(0px, -10px);
+  }
+
+  75% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
 }
