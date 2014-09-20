@@ -10,7 +10,7 @@ var browser = require('browser-sync');
 var BASE_PATH = './';
 var ect_path = ['./template/*.ect'];
 var js_path = ['./js/*.js'];
-var sass_path = ['./scss/*.scss'];
+var sass_path = ['./scss/**/*.scss'];
 
 //pc用
 //htmlに関するタスク

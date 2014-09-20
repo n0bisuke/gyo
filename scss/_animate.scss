@@ -1,0 +1,22 @@
+@keyframes swim {
+  0%   {transform:  translate(0px, 0px);    }
+  10%  {transform:  translate(10px, 0px);    }
+  25%  {transform:  translate(20px, 0px);   }
+  50%  {transform:  translate(30px, 0px);   }
+  75%  {transform:  translate(40px, 0px);   }
+  100% {transform:  translate(50px, 0px);   }
+}
+
+@keyframes shake {
+    0% { transform: translate(3px, 2px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-1deg); }
+    20% { transform: translate(-4px, 0px) rotate(1deg); }
+    30% { transform: translate(0px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(1deg); }
+    50% { transform: translate(-2px, 3px) rotate(-1deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(3px, 2px) rotate(-1deg); }
+    80% { transform: translate(-2px, -2px) rotate(1deg); }
+    90% { transform: translate(2px, 4px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-1deg); }
+}
