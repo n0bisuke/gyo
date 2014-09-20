@@ -18,40 +18,30 @@
 	}
 
 	&.sukuu{
+		position:relative;
+		z-index: -1;
 		background-color:#DD926A;
 	}
 }
 
-@mixin gold_fish(){
+@mixin gold_fish ($top, $left){
 	position: absolute;
 	width: 300px;
 	height: 189px;
 	background-color: red;
 	z-index: 1;
-	top: 30px;
-	opacity: 0.5;
+	top: $top;
+	left: $left;
+	opacity: 0.3;
 	background: url('../image/gold_fish.png') no-repeat;
 	animation: shake 5s infinite linear;	
 }
 
-.fish{
-	@include gold_fish();
-}
-
-/*水槽*/
-.suisou{
-	position: absolute;
-	top: 0;
-	background-color: black;
-	height: 100%;
-	width:100%;
-	z-index: -1;
-	margin: 10px 10px 10px 10px;
-
-	img{
-		width: 100px;
-		animation: shake 5s infinite linear;
-		animation: swim 5s infinite linear;
-		transform: scaleX(-1);
+$tops: 30px, 100px, 30px,   500px, 500px, 800px, 800px, 800px, 1100px, 1100px;
+$lefts: 0px,   400px, 800px, 200px, 600px, 0px, 400px, 800px, 200px, 600px;
+$count: 10;
+@for $i from 1 through $count {
+	.fish_#{$i} {
+		@include gold_fish(nth($tops, $i), nth($lefts, $i));
 	}
-}
+}  

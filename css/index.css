@@ -12,35 +12,136 @@
   .ctl.gyo {
     background-color: #76B3BE; }
   .ctl.sukuu {
+    position: relative;
+    z-index: -1;
     background-color: #DD926A; }
 
-.fish {
+.fish_1 {
   position: absolute;
   width: 300px;
   height: 189px;
   background-color: red;
   z-index: 1;
   top: 30px;
-  opacity: 0.5;
+  left: 0px;
+  opacity: 0.3;
   background: url('../image/gold_fish.png') no-repeat;
   -webkit-animation: shake 5s infinite linear;
           animation: shake 5s infinite linear; }
 
-/*水槽*/
-.suisou {
+.fish_2 {
   position: absolute;
-  top: 0;
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  margin: 10px 10px 10px 10px; }
-  .suisou img {
-    width: 100px;
-    -webkit-animation: shake 5s infinite linear;
-            animation: shake 5s infinite linear;
-    -webkit-animation: swim 5s infinite linear;
-            animation: swim 5s infinite linear;
-    -webkit-transform: scaleX(-1);
-        -ms-transform: scaleX(-1);
-            transform: scaleX(-1); }
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 100px;
+  left: 400px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
+
+.fish_3 {
+  position: absolute;
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 30px;
+  left: 800px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
+
+.fish_4 {
+  position: absolute;
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 500px;
+  left: 200px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
+
+.fish_5 {
+  position: absolute;
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 500px;
+  left: 600px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
+
+.fish_6 {
+  position: absolute;
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 800px;
+  left: 0px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
+
+.fish_7 {
+  position: absolute;
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 800px;
+  left: 400px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
+
+.fish_8 {
+  position: absolute;
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 800px;
+  left: 800px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
+
+.fish_9 {
+  position: absolute;
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 1100px;
+  left: 200px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
+
+.fish_10 {
+  position: absolute;
+  width: 300px;
+  height: 189px;
+  background-color: red;
+  z-index: 1;
+  top: 1100px;
+  left: 600px;
+  opacity: 0.3;
+  background: url('../image/gold_fish.png') no-repeat;
+  -webkit-animation: shake 5s infinite linear;
+          animation: shake 5s infinite linear; }
