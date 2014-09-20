@@ -30,9 +30,10 @@ function gyoPush(){
     // gyoDataStore.push({lat:lat, lon:lon},function(data){
     //     console.log("push送信完了!",data);
     // });
-
+    
     gyoDataStore.send({lat:lat, lon:lon},function(data){
         console.log("send送信完了!",data);
+        $('.gyo img').attr('src','image/gyo_gold_fish.gif');
     });
 }
 
