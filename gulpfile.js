@@ -21,6 +21,7 @@ var browser = require('browser-sync');
 var BASE_PATH = './';
 var ect_path = ['./template/*.ect'];
 var js_path = ['./js/*.js'];
+var css_path = ['./sass/*.scss'];
 
 //pc用
 //htmlに関するタスク
@@ -34,6 +35,13 @@ gulp.task('html', function(){
         .pipe($.prettify())
         .pipe(gulp.dest(BASE_PATH))
        .pipe(browser.reload({stream: true}));
+});
+
+gulp.task('style', function () {
+    return gulp.src(css_path)
+        .pipe($.autoprefixer(['last 3 version', 'ie >= 9', 'Android 4.0']))
+        .pipe(gulp.dest(BASE_PATH + 'css'))
+        .pipe(browser.reload({stream: true}));
 });
 
 // gulp.task('js', function(){
@@ -64,7 +72,7 @@ gulp.task('reload', function () {
 
 gulp.task('default',['serv'],function(){
     gulp.watch(ect_path,['html']);
-    // gulp.watch(path.pc.sass.src,['style']);
+    gulp.watch(css_path,['style']);
     //gulp.watch(js_path,['js']);
     // gulp.watch(path.pc.img.src,['image']);
     // gulp.watch(path.sp.html.src_ect_watch,['html_sp']);
