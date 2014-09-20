@@ -46,8 +46,8 @@ gulp.task('serv', function () {
     browser.init(null, {
         server: {
             baseDir: './',
-            port: 6666
-        }
+        },
+        port: 3003
     });
 });
 
