@@ -32,7 +32,7 @@
     color: white; }
 
 .fish_swim:nth-child(1) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 30px;
   left: 20px;
@@ -41,9 +41,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(1):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(2) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 10px;
   left: 40px;
@@ -52,9 +55,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(2):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(3) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 3px;
   left: 80px;
@@ -63,9 +69,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(3):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(4) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 50px;
   left: 20px;
@@ -74,9 +83,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(4):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(5) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 50px;
   left: 60px;
@@ -85,9 +97,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(5):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(6) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 80px;
   left: 0px;
@@ -96,9 +111,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(6):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(7) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 80px;
   left: 40px;
@@ -107,9 +125,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(7):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(8) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 80px;
   left: 80px;
@@ -118,9 +139,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(8):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(9) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 110px;
   left: 20px;
@@ -129,9 +153,12 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(9):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
 
 .fish_swim:nth-child(10) {
-  background: url('../image/swim_gold_fish.gif') no-repeat;
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
   position: absolute;
   top: 110px;
   left: 60px;
@@ -140,3 +167,342 @@
   height: 30%;
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(10):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(11) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(11):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(12) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 220px;
+  left: 40px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(12):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(13) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 220px;
+  left: 60px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(13):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(14) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 150px;
+  left: 80px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(14):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(15) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(15):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(16) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(16):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(17) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(17):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(18) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(18):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(19) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(19):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(20) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 3px;
+  left: 80px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(20):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(21) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(21):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(22) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(22):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(23) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(23):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(24) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(24):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(25) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(25):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(26) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(26):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(27) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 110px;
+  left: 60px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(27):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(28) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(28):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(29) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 220px;
+  left: 40px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(29):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(30) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 220px;
+  left: 60px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(30):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(31) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 150px;
+  left: 80px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(31):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(32) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(32):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(33) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(33):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }
+
+.fish_swim:nth-child(34) {
+  background: url('../image/swim_gold_fish_dust.gif') no-repeat;
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  background-size: 50% 30%;
+  width: 50%;
+  height: 30%;
+  -webkit-animation: swim 5s infinite linear;
+          animation: swim 5s infinite linear; }
+  .fish_swim:nth-child(34):nth-child(even) {
+    -webkit-animation: shake 5s infinite linear;
+            animation: shake 5s infinite linear; }

@@ -22,7 +22,11 @@ var Gyo = {
       },
 
       sukuu: function(){
-        localStorage.gyo_count = parseInt(localStorage.gyo_count) + 1;
+        var gyo_count = localStorage.gyo_count;
+        gyo_count = parseInt(gyo_count);
+        console.log(gyo_count);
+        localStorage.gyo_count = gyo_count + 1;
+        //console.log(localStorage.gyo_count);
       }
 };
 

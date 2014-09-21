@@ -4,24 +4,24 @@
             transform: translate(0px, 0px); }
 
   10% {
-    -webkit-transform: translate(10px, 0px);
-            transform: translate(10px, 0px); }
-
-  25% {
     -webkit-transform: translate(20px, 0px);
             transform: translate(20px, 0px); }
 
-  50% {
-    -webkit-transform: translate(30px, 0px);
-            transform: translate(30px, 0px); }
-
-  75% {
+  25% {
     -webkit-transform: translate(40px, 0px);
             transform: translate(40px, 0px); }
 
+  50% {
+    -webkit-transform: translate(60px, 0px);
+            transform: translate(60px, 0px); }
+
+  75% {
+    -webkit-transform: translate(80px, 0px);
+            transform: translate(80px, 0px); }
+
   100% {
-    -webkit-transform: translate(50px, 0px);
-            transform: translate(50px, 0px); } }
+    -webkit-transform: translate(100px, 0px);
+            transform: translate(100px, 0px); } }
 
 @keyframes swim {
   0% {
@@ -29,24 +29,24 @@
             transform: translate(0px, 0px); }
 
   10% {
-    -webkit-transform: translate(10px, 0px);
-            transform: translate(10px, 0px); }
-
-  25% {
     -webkit-transform: translate(20px, 0px);
             transform: translate(20px, 0px); }
 
-  50% {
-    -webkit-transform: translate(30px, 0px);
-            transform: translate(30px, 0px); }
-
-  75% {
+  25% {
     -webkit-transform: translate(40px, 0px);
             transform: translate(40px, 0px); }
 
+  50% {
+    -webkit-transform: translate(60px, 0px);
+            transform: translate(60px, 0px); }
+
+  75% {
+    -webkit-transform: translate(80px, 0px);
+            transform: translate(80px, 0px); }
+
   100% {
-    -webkit-transform: translate(50px, 0px);
-            transform: translate(50px, 0px); } }
+    -webkit-transform: translate(100px, 0px);
+            transform: translate(100px, 0px); } }
 
 @-webkit-keyframes shake {
   0% {

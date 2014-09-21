@@ -44,7 +44,7 @@
 }
 
 @mixin fish_swim($top, $left){
-	background: url('../image/swim_gold_fish.gif') no-repeat;
+	background: url('../image/swim_gold_fish_dust.gif') no-repeat;
 	$w: 50%;
 	$h: 30%;
 	position: absolute;
@@ -57,14 +57,17 @@
 	background-size: $w $h;
 	width: $w;
 	height: $h;
-	animation: swim 5s infinite linear;	
+	animation: swim 5s infinite linear;
 }
 
-$tops: 30px, 10px, 3px,   50px, 50px, 80px, 80px, 80px, 110px, 110px;
-$lefts: 20px,  40px, 80px, 20px, 60px, 0px, 40px, 80px, 20px, 60px;
-$count: 10;
+$tops: 30px, 10px, 3px,   50px, 50px, 80px, 80px, 80px, 110px, 110px, 220px, 220px, 220px, 150px, 150px, 150px, 200px, 30px, 10px, 3px,   50px, 50px, 80px, 80px, 80px, 110px, 110px, 220px, 220px, 220px, 150px, 150px, 150px, 200px;
+$lefts: 20px,  40px, 80px, 20px, 60px, 0px, 40px, 80px, 20px,     60px, 20px , 40px, 60px, 80px, 100px,        200px , 150px, 20px,  40px, 80px, 20px, 60px, 0px, 40px, 80px, 20px,     60px, 20px , 40px, 60px, 80px, 100px,        200px , 150px;
+$count: 34;
 @for $i from 1 through $count {
 	.fish_swim:nth-child(#{$i}) {
 		@include fish_swim(nth($tops, $i), nth($lefts, $i));
+		&:nth-child(even){
+			animation: shake 5s infinite linear;
+		}
 	}
 }
