@@ -1,9 +1,10 @@
 (function($){
-    if(localStorage.gyo){
+    if(localStorage.gyo_count){
 
     }else{//初アクセス
         Gyo.init();
     }
+
 
     $('.gyo').on('click', gyoPush); //ぎょっ
 
@@ -40,13 +41,18 @@ function gyoPush(){
     // });
     
     audio.play(); //GYO!!SOUND
+    gyo_anime();
+    Gyo.gyoSave(Gyo.gyoGet() - 1);
+    
+    gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id},function(data){
+        console.log("send送信完了!",data);
+    });
+}
 
+//gyoのアニメーション
+function gyo_anime(){
     $('.gyo_text').attr('src','image/gyo_gold_fish_loop.gif');
     setTimeout(function(){
         $('.gyo_text').attr('src','image/gyo_gold_fish.gif');
     }, 100);
-
-    gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id},function(data){
-        console.log("send送信完了!",data);
-    });
 }

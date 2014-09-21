@@ -10,12 +10,16 @@ var Gyo = {
 	},
 
 	init: function(){
-		localStorage.gyo = JSON.stringify(this.gyo_user);
+	     //localStorage.gyo = JSON.stringify(this.gyo_user);
+          localStorage.gyo_count = 10;
 	},
 	gyoGet: function(){
-		return JSON.parse(localStorage.gyo).collection;
-	}
-
+		return parseInt(localStorage.gyo_count);
+	},
+      gyoSave: function(gyo_count){
+        console.log("GYOカウント", gyo_count);
+        localStorage.gyo_count = gyo_count;
+      }
 };
 
 
