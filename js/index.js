@@ -23,11 +23,11 @@ gyoDataStore.on("push", function(data){
 gyoDataStore.on("send", function(data){
     console.log("send受信",data);
 
-    if(data.value.time !== now_time){
+    if(data.value.my_id !== my_id){
         //SUKUUに金魚
-        $('.sukuu_fish').addClass('swim');
+        $('.sukuu_fish').addClass('swim').show();
         setTimeout(function(){
-            $('.sukuu_fish').removeClass('swim');
+            $('.sukuu_fish').hide().removeClass('swim');
         }, 1000);
     }
 });
@@ -38,8 +38,7 @@ function gyoPush(){
     // gyoDataStore.push({lat:lat, lon:lon},function(data){
     //     console.log("push送信完了!",data);
     // });
-    // audio.pause();
-    // audio.currentTime = 0;
+    
     audio.play(); //GYO!!SOUND
 
     $('.gyo_text').attr('src','image/gyo_gold_fish_loop.gif');
@@ -47,7 +46,7 @@ function gyoPush(){
         $('.gyo_text').attr('src','image/gyo_gold_fish.gif');
     }, 100);
 
-    gyoDataStore.send({lat:lat, lon:lon, time:now_time},function(data){
+    gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id},function(data){
         console.log("send送信完了!",data);
     });
 }

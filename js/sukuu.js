@@ -18,6 +18,7 @@
 function sukuu(){
     //ぽいアニメーション
     $('.poi').show();
+    audio.play(); //GYO!!SOUND
     setTimeout(function(){
         $('.poi').hide();
     }, 500);
@@ -34,6 +35,5 @@ function sukuu(){
 
 gyoDataStore.on("send", function(data){
     console.log("send受信",data);
-
     $('.mizu').append('<div class="fish_swim poi_fish"></div>');
 });
