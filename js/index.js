@@ -1,7 +1,22 @@
 (function($){
+    var init_cnt = 0;
     if(localStorage.gyo_count){
-
+        $('.init').remove();
+        $('.suisou').show();
     }else{//初アクセス
+        $('.init').on('click', function(){
+            if(init_cnt == 0){
+                $('.init img').attr('src', 'image/tutorial2.png');
+            }else if(init_cnt == 1){
+                $('.init img').attr('src', 'image/tutorial3.png');
+            }else if(init_cnt == 2){
+                $('.init').remove();
+                $('.suisou').show();
+                audio.play();
+            }
+            init_cnt++;
+        });
+
         Gyo.init();
     }
 
@@ -54,9 +69,9 @@ function gyoPush(){
         Gyo.gyoSave(current_gyo); //ローカルストレージの値更新
         $('.fish:last-child').remove(); //金魚を減らす
 
-        // gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id, type: 'gyo'},function(data){
-        //     console.log("send送信完了!",data);
-        // });
+        gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id, type: 'gyo'},function(data){
+            console.log("send送信完了!",data);
+        });
         gyoDataStore.push({lat:lat, lon:lon, time:now_time, my_id: my_id, type: 'gyo'},function(data){
             console.log("push送信完了!",data);
         });

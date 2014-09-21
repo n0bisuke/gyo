@@ -42,12 +42,8 @@ function sukuu(){
     gyoDataStore.send({time:now_time, my_id: my_id, type: 'sukuu'},function(data){
         console.log("sukuuuu!",data);
     });
-    
-    milkcocoa.dataStore('chat').query().done(function(data) {
-        data.forEach(function(value) {
-            dataStore.remove(data_id);
-        });
-    });
+
+    milkcocoa.dataStore('chat').remove(data_id);
 
     console.log('data-id',data_id);
 
