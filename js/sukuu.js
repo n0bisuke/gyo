@@ -1,8 +1,8 @@
 (function($){
-    if(localStorage.gyo){
+    if(localStorage.gyo_count){
 
     }else{//初アクセス
-        Gyo.init();
+        //Gyo.init();
     }
 
     $('.mizu').on('click', sukuu); //ぎょっ
@@ -18,12 +18,19 @@
 function sukuu(){
     //ぽいアニメーション
     $('.poi').show();
+    audio.play(); //GYO!!SOUND
     setTimeout(function(){
         $('.poi').hide();
     }, 500);
     //金魚けそう
     $('.poi_fish:last-child').remove();
     
+    gyoDataStore.send({time:now_time, my_id: my_id, type: 'sukuu'},function(data){
+        console.log("sukuuuu!",data);
+    });
+
+    Gyo.sukuu(); //すくった
+
     setTimeout(function(){
         if(0 >= $(".poi_fish").size()){
             alert("きれいになりました!!");
@@ -32,8 +39,14 @@ function sukuu(){
     }, 500);
 }
 
+//イベント受信
 gyoDataStore.on("send", function(data){
     console.log("send受信",data);
-
-    $('.mizu').append('<div class="fish_swim poi_fish"></div>');
+    
+    if(data.value.type == 'gyo'){
+        $('.mizu').append('<div class="fish_swim poi_fish"></div>');
+    }else if(data.value.type == 'sukuu' && data.value.my_id != my_id){
+       $('.poi_fish:last-child').remove(); 
+   }
+   
 });

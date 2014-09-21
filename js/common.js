@@ -2,19 +2,32 @@ var milkcocoa = new MilkCocoa("https://io-ui0aozptu.mlkcca.com");
 var gyo_locale; //位置情報
 var gyoDataStore = milkcocoa.dataStore("chat");
 var now_time = new Date();
+var my_id = Math.random();
 var Gyo = {
 	gyo_user: {
 		'user_id': '',
-		'collection': [1,2,3,5]
+		'collection': 10
 	},
 
 	init: function(){
-		localStorage.gyo = JSON.stringify(this.gyo_user);
+	     //localStorage.gyo = JSON.stringify(this.gyo_user);
+          localStorage.gyo_count = 10;
 	},
 	gyoGet: function(){
-		return JSON.parse(localStorage.gyo).collection;
-	}
+		return parseInt(localStorage.gyo_count);
+	},
+      gyoSave: function(gyo_count){
+        console.log("GYOカウント", gyo_count);
+        localStorage.gyo_count = gyo_count;
+      },
 
+      sukuu: function(){
+        var gyo_count = localStorage.gyo_count;
+        gyo_count = parseInt(gyo_count);
+        console.log(gyo_count);
+        localStorage.gyo_count = gyo_count + 1;
+        //console.log(localStorage.gyo_count);
+      }
 };
 
 

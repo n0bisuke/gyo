@@ -1,5 +1,5 @@
 (function($){
-    if(localStorage.gyo){
+    if(localStorage.gyo_count){
 
     }else{//初アクセス
         Gyo.init();
@@ -8,9 +8,9 @@
     $('.gyo').on('click', gyoPush); //ぎょっ
 
     //GYO描画
-    var gyo_count = 10;
+    var gyo_count = Gyo.gyoGet();
     var html = '';
-    for (var i = 1; i <= gyo_count; i++)html += '<div class="fish_'+ i +'"></div>';
+    for (var i = 0; i < gyo_count; i++)html += '<div class="fish"></div>';
     $('.gyo').append(html);
 
 })(jQuery);
@@ -22,29 +22,65 @@ gyoDataStore.on("push", function(data){
 
 gyoDataStore.on("send", function(data){
     console.log("send受信",data);
+    audio.play();
 
-    if(data.value.time !== now_time){
+    if(data.value.my_id !== my_id){
         //SUKUUに金魚
-        $('.sukuu_fish').addClass('swim');
+        $('.sukuu_fish').addClass('swim').show();
         setTimeout(function(){
-            $('.sukuu_fish').removeClass('swim');
+            $('.sukuu_fish').hide().removeClass('swim');
         }, 1000);
     }
+
 });
 
 function gyoPush(){
-    var lat = gyo_locale.coords.latitude;
-    var lon = gyo_locale.coords.longitude;
+    var lat = '',
+        lon = '';
+    
+    // if(typeof(gyo_locale.coords.latitude) != 'undefined') lat = gyo_locale.coords.latitude;
+    // if(typeof(gyo_locale.coords.longitude) != 'undefined') lon = gyo_locale.coords.longitude;
+
     // gyoDataStore.push({lat:lat, lon:lon},function(data){
     //     console.log("push送信完了!",data);
     // });
     
-    $('.gyo_text').attr('src','image/gyo_gold_fish_loop.gif');
+    audio.play(); //GYO!!SOUND
+    var current_gyo = Gyo.gyoGet() - 1;
+    
+    //10回まで
+    if(current_gyo >= 0){ //通常系
+        gyo_anime('image/gyo_gold_fish_loop.gif'); //通常ゴミ運び
+        Gyo.gyoSave(current_gyo); //ローカルストレージの値更新
+        $('.fish:last-child').remove(); //金魚を減らす
+
+        gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id, type: 'gyo'},function(data){
+            console.log("send送信完了!",data);
+        });
+
+    }else{ //異常系
+        gyo_anime('image/gyo_gold_fish_notdust_loop.gif'); //ゴミなくなる
+
+        gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id, type: 'gyo'},function(data){
+            console.log("send送信完了!",data);
+        });
+    }
+
+}
+
+//gyoのアニメーション
+function gyo_anime(type){
+    // console.log("たいぷ", type);
+    // var srcurl = '';
+    // if(type === 'normal'){
+    //     srcurl = 'image/gyo_gold_fish_loop.gif';
+    // }else if(type === 'done'){
+    //     srcurl = 'image/gyo_gold_fish_notdust_loop.gif';
+    // }
+    var srcurl = type;
+    $('.gyo_text').attr('src',srcurl);
+
     setTimeout(function(){
         $('.gyo_text').attr('src','image/gyo_gold_fish.gif');
     }, 100);
-
-    gyoDataStore.send({lat:lat, lon:lon, time:now_time},function(data){
-        console.log("send送信完了!",data);
-    });
 }
