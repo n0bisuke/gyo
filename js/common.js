@@ -6,7 +6,7 @@ var my_id = Math.random();
 var Gyo = {
 	gyo_user: {
 		'user_id': '',
-		'collection': [1,2,3,5]
+		'collection': 10
 	},
 
 	init: function(){

@@ -22,7 +22,7 @@ gyoDataStore.on("push", function(data){
 
 gyoDataStore.on("send", function(data){
     console.log("send受信",data);
-
+    audio.play();
     if(data.value.my_id !== my_id){
         //SUKUUに金魚
         $('.sukuu_fish').addClass('swim').show();
