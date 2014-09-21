@@ -20,3 +20,8 @@
     90% { transform: translate(2px, 4px) rotate(0deg); }
     100% { transform: translate(2px, -3px) rotate(-1deg); }
 }
+
+@keyframes sukuu_swim {
+  0%   {transform:  translate(0px, 0px);    }
+  100% {transform:  translate(-500px, 0px);   }
+}

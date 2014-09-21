@@ -138,6 +138,24 @@
     -webkit-transform: translate(2px, -3px) rotate(-1deg);
             transform: translate(2px, -3px) rotate(-1deg); } }
 
+@-webkit-keyframes sukuu_swim {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); }
+
+  100% {
+    -webkit-transform: translate(-500px, 0px);
+            transform: translate(-500px, 0px); } }
+
+@keyframes sukuu_swim {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px); }
+
+  100% {
+    -webkit-transform: translate(-500px, 0px);
+            transform: translate(-500px, 0px); } }
+
 .container {
   width: 320px;
   height: 400px; }
