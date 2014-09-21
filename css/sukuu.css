@@ -18,6 +18,8 @@
     left: 10px;
     height: 300px;
     width: 310px; }
+    .suisou .mizu .poi {
+      display: none; }
   .suisou .back {
     position: fixed;
     bottom: 5px;
@@ -29,7 +31,7 @@
     font-size: 35px;
     color: white; }
 
-.fish_swim_1 {
+.fish_swim:nth-child(1) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 30px;
@@ -40,7 +42,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_2 {
+.fish_swim:nth-child(2) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 10px;
@@ -51,7 +53,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_3 {
+.fish_swim:nth-child(3) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 3px;
@@ -62,7 +64,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_4 {
+.fish_swim:nth-child(4) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 50px;
@@ -73,7 +75,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_5 {
+.fish_swim:nth-child(5) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 50px;
@@ -84,7 +86,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_6 {
+.fish_swim:nth-child(6) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 80px;
@@ -95,7 +97,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_7 {
+.fish_swim:nth-child(7) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 80px;
@@ -106,7 +108,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_8 {
+.fish_swim:nth-child(8) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 80px;
@@ -117,7 +119,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_9 {
+.fish_swim:nth-child(9) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 110px;
@@ -128,7 +130,7 @@
   -webkit-animation: swim 5s infinite linear;
           animation: swim 5s infinite linear; }
 
-.fish_swim_10 {
+.fish_swim:nth-child(10) {
   background: url('../image/swim_gold_fish.gif') no-repeat;
   position: absolute;
   top: 110px;

@@ -21,6 +21,13 @@
 		left: 10px;
 		height: 300px;
 		width: 310px;
+
+		.poi{
+			display: none;
+			// img{
+			// 	width: 50%;
+			// }
+		}
 	}
 
 	.back{
@@ -57,7 +64,7 @@ $tops: 30px, 10px, 3px,   50px, 50px, 80px, 80px, 80px, 110px, 110px;
 $lefts: 20px,  40px, 80px, 20px, 60px, 0px, 40px, 80px, 20px, 60px;
 $count: 10;
 @for $i from 1 through $count {
-	.fish_swim_#{$i} {
+	.fish_swim:nth-child(#{$i}) {
 		@include fish_swim(nth($tops, $i), nth($lefts, $i));
 	}
 }
