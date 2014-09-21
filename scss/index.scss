@@ -30,6 +30,17 @@
 		img{
 			position: relative;
 			z-index: 3;
+
+			&.sukuu_fish{
+				position: absolute;
+				z-index: 4;
+				right: -100px;
+				width: 30%;
+
+				&.swim{
+					animation: sukuu_swim 1s infinite linear;
+				}
+			}
 		}
 	}
 }

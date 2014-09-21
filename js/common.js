@@ -1,6 +1,7 @@
 var milkcocoa = new MilkCocoa("https://io-ui0aozptu.mlkcca.com");
 var gyo_locale; //位置情報
 var gyoDataStore = milkcocoa.dataStore("chat");
+var now_time = new Date();
 var Gyo = {
 	gyo_user: {
 		'user_id': '',

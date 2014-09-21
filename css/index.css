@@ -21,6 +21,14 @@
     .ctl.sukuu img {
       position: relative;
       z-index: 3; }
+      .ctl.sukuu img.sukuu_fish {
+        position: absolute;
+        z-index: 4;
+        right: -100px;
+        width: 30%; }
+        .ctl.sukuu img.sukuu_fish.swim {
+          -webkit-animation: sukuu_swim 1s infinite linear;
+                  animation: sukuu_swim 1s infinite linear; }
 
 .fish_0 {
   position: absolute;

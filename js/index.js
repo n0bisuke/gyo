@@ -22,6 +22,14 @@ gyoDataStore.on("push", function(data){
 
 gyoDataStore.on("send", function(data){
     console.log("send受信",data);
+
+    if(data.value.time !== now_time){
+        //SUKUUに金魚
+        $('.sukuu_fish').addClass('swim');
+        setTimeout(function(){
+            $('.sukuu_fish').removeClass('swim');
+        }, 1000);
+    }
 });
 
 function gyoPush(){
@@ -32,22 +40,11 @@ function gyoPush(){
     // });
     
     $('.gyo_text').attr('src','image/gyo_gold_fish_loop.gif');
-
     setTimeout(function(){
         $('.gyo_text').attr('src','image/gyo_gold_fish.gif');
     }, 100);
-    
 
-    gyoDataStore.send({lat:lat, lon:lon},function(data){
+    gyoDataStore.send({lat:lat, lon:lon, time:now_time},function(data){
         console.log("send送信完了!",data);
-        
     });
-}
-
-function getGyo(data){
-    console.log("GYO!!!受信",data);
-}
-
-function sukuuFunc(){
-    alert("aaa");
 }
