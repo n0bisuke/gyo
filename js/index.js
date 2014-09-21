@@ -5,13 +5,12 @@
         Gyo.init();
     }
 
-
     $('.gyo').on('click', gyoPush); //ぎょっ
 
     //GYO描画
-    var gyo_count = 10;
+    var gyo_count = Gyo.gyoGet();
     var html = '';
-    for (var i = 1; i <= gyo_count; i++)html += '<div class="fish_'+ i +'"></div>';
+    for (var i = 0; i < gyo_count; i++)html += '<div class="fish"></div>';
     $('.gyo').append(html);
 
 })(jQuery);
@@ -34,19 +33,34 @@ gyoDataStore.on("send", function(data){
 });
 
 function gyoPush(){
-    var lat = gyo_locale.coords.latitude;
-    var lon = gyo_locale.coords.longitude;
+    var lat = '',
+        lon = '';
+    
+    if(gyo_locale.coords.latitude) lat = gyo_locale.coords.latitude;
+    if(gyo_locale.coords.longitude) lon = gyo_locale.coords.longitude;
     // gyoDataStore.push({lat:lat, lon:lon},function(data){
     //     console.log("push送信完了!",data);
     // });
     
     audio.play(); //GYO!!SOUND
     gyo_anime();
-    Gyo.gyoSave(Gyo.gyoGet() - 1);
-    
-    gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id},function(data){
-        console.log("send送信完了!",data);
-    });
+
+    var current_gyo = Gyo.gyoGet() - 1;
+    //10回まで
+    if(current_gyo >= 0){
+        Gyo.gyoSave(current_gyo);
+        $('.fish:last-child').remove();
+
+        gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id},function(data){
+            console.log("send送信完了! おーばー",data);
+        });
+    }else{
+
+        gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id},function(data){
+            console.log("send送信完了!",data);
+        });
+    }
+
 }
 
 //gyoのアニメーション

@@ -24,7 +24,9 @@ function sukuu(){
     }, 500);
     //金魚けそう
     $('.poi_fish:last-child').remove();
-    
+
+    Gyo.sukuu(); //すくった
+
     setTimeout(function(){
         if(0 >= $(".poi_fish").size()){
             alert("きれいになりました!!");

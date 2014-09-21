@@ -60,15 +60,11 @@
 	animation: shake 5s infinite linear;
 }
 
-.fish_0{
-	@include gold_fish(0px, 0px);
-}
-
-$tops: 10px, 10px, 10px,  150px, 150px, 230px, 230px, 230px, 380px, 380px;
-$lefts: 0px,  120px, 220px, 80px, 180px, 0px, 120px, 220px, 80px, 180px;
-$count: 10;
+$tops: 0px, 10px, 10px, 10px,  150px, 150px, 230px, 230px, 230px, 380px, 380px, 380px;
+$lefts: 0px, 0px,  120px, 220px, 80px, 180px, 0px, 120px, 220px, 80px, 180px, 180px;
+$count: 11;
 @for $i from 1 through $count {
-	.fish_#{$i} {
+	.fish:nth-child(#{$i}) {
 		@include gold_fish(nth($tops, $i), nth($lefts, $i));
 	}
 }  

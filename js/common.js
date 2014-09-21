@@ -19,6 +19,10 @@ var Gyo = {
       gyoSave: function(gyo_count){
         console.log("GYOカウント", gyo_count);
         localStorage.gyo_count = gyo_count;
+      },
+
+      sukuu: function(){
+        localStorage.gyo_count = parseInt(localStorage.gyo_count) + 1;
       }
 };
 
