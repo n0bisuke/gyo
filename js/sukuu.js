@@ -6,11 +6,23 @@
     }
 
     $('.mizu').on('click', sukuu); //ぎょっ
+    var db_count = 0;
+    
+    milkcocoa.dataStore('chat').query({type : 'gyo'}).done(function(basic_users) {
+        console.log('basic users', basic_users[0].id);
+        db_count = basic_users.length;
+        var html = '';
+        for (var i = 0; i < db_count; i++){
+            var item = basic_users[i];
+            html += '<div class="fish_swim poi_fish" data-id="'+ item.id +'"></div>';
+        }
+        $('.mizu').append(html);
+    });
 
-    //GYO描画
+    // //GYO描画
     // var gyo_count = 10;
     // var html = '';
-    // for (var i = 1; i <= gyo_count; i++)html += '<div class="fish_'+ i +'"></div>';
+
     // $('.gyo').append(html);
 
 })(jQuery);
@@ -23,11 +35,21 @@ function sukuu(){
         $('.poi').hide();
     }, 500);
     //金魚けそう
+
+    var data_id = $('.poi_fish:last-child').attr('data-id');
     $('.poi_fish:last-child').remove();
-    
+
     gyoDataStore.send({time:now_time, my_id: my_id, type: 'sukuu'},function(data){
         console.log("sukuuuu!",data);
     });
+    
+    milkcocoa.dataStore('chat').query().done(function(data) {
+        data.forEach(function(value) {
+            dataStore.remove(data_id);
+        });
+    });
+
+    console.log('data-id',data_id);
 
     Gyo.sukuu(); //すくった
 

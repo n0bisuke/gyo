@@ -54,8 +54,11 @@ function gyoPush(){
         Gyo.gyoSave(current_gyo); //ローカルストレージの値更新
         $('.fish:last-child').remove(); //金魚を減らす
 
-        gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id, type: 'gyo'},function(data){
-            console.log("send送信完了!",data);
+        // gyoDataStore.send({lat:lat, lon:lon, time:now_time, my_id: my_id, type: 'gyo'},function(data){
+        //     console.log("send送信完了!",data);
+        // });
+        gyoDataStore.push({lat:lat, lon:lon, time:now_time, my_id: my_id, type: 'gyo'},function(data){
+            console.log("push送信完了!",data);
         });
 
     }else{ //異常系
