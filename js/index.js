@@ -39,6 +39,7 @@ function gyoPush(){
     //     console.log("push送信完了!",data);
     // });
     
+    audio.play(); //GYO!!SOUND
     $('.gyo_text').attr('src','image/gyo_gold_fish_loop.gif');
     setTimeout(function(){
         $('.gyo_text').attr('src','image/gyo_gold_fish.gif');
