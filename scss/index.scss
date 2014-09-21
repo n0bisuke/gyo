@@ -36,7 +36,7 @@
 				z-index: 4;
 				right: -100px;
 				width: 30%;
-
+				display: none;
 				&.swim{
 					animation: sukuu_swim 1s infinite linear;
 				}

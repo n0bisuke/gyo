@@ -38,8 +38,10 @@ function gyoPush(){
     // gyoDataStore.push({lat:lat, lon:lon},function(data){
     //     console.log("push送信完了!",data);
     // });
-    
+    // audio.pause();
+    // audio.currentTime = 0;
     audio.play(); //GYO!!SOUND
+
     $('.gyo_text').attr('src','image/gyo_gold_fish_loop.gif');
     setTimeout(function(){
         $('.gyo_text').attr('src','image/gyo_gold_fish.gif');
